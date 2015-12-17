@@ -1,1 +1,1 @@
-continue tutorial here: https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
+<div>continue tutorial here: https://developer.mozilla.org/en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over</div>
