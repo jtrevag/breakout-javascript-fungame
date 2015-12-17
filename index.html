@@ -21,29 +21,14 @@
             var dy = -2;
             var ballRadius = 10;
             var color = "#0095DD";
-            var changeColor = false;
             
             var paddleHeight = 10;
             var paddleWidth = 75;
             var paddleX = (canvas.width - paddleWidth)/2;
             
-            function getRandomColor() {
-                var letters = '0123456789ABCDEF'.split('');
-                var color = '#';
-                for (var i = 0; i < 6; i++ ) {
-                    color += letters[Math.floor(Math.random() * 16)];
-                }
-                return color;
-            }
-            
             function drawBall(){
                 ctx.beginPath();
                 ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-                if(changeColor){
-                    console.log("color: " + color);
-                    color = getRandomColor();
-                    changeColor = false;
-                }
                 ctx.fillStyle = color;
                 ctx.fill();
                 ctx.closePath();
@@ -62,11 +47,9 @@
                 // reverse the balls' y direction.
                 if(y + dy < ballRadius || y + dy > canvas.height - ballRadius){
                     dy = -dy;
-                    changeColor = true;
                 }
                 if(x + dx < ballRadius || x + dx > canvas.width - ballRadius){
                     dx = -dx;
-                    changeColor = true;
                 }
                 
                 x += dx;
